@@ -1,19 +1,19 @@
 {
   "canisters": {
-    "blank_simple_frontend_backend": {
-      "main": "src/blank_simple_frontend_backend/main.mo",
+    "property_database": {
+      "main": "src/property_database/main.mo",
       "type": "motoko"
     },
-    "blank_simple_frontend_frontend": {
+    "Homevestors_DAO_frontend": {
       "dependencies": [
-        "blank_simple_frontend_backend"
+        "property_database"
       ],
       "frontend": {
-        "entrypoint": "src/blank_simple_frontend_frontend/src/index.html"
+        "entrypoint": "src/Homevestors_DAO_frontend/src/index.html"
       },
       "source": [
-        "src/blank_simple_frontend_frontend/assets",
-        "dist/blank_simple_frontend_frontend/"
+        "src/Homevestors_DAO_frontend/assets",
+        "dist/Homevestors_DAO_frontend/"
       ],
       "type": "assets"
     }

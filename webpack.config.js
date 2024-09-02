@@ -7,7 +7,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
-const frontendDirectory = "blank_simple_frontend_frontend";
+const frontendDirectory = "Homevestors_DAO_frontend";
 
 const frontend_entry = path.join("src", frontendDirectory, "src", "index.html");
 
