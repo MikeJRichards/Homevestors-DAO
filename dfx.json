@@ -1,12 +1,16 @@
 {
   "canisters": {
+    "NFT": {
+      "main": "src/NFT/main.mo",
+      "type": "motoko"
+    },
     "property_database": {
       "main": "src/property_database/main.mo",
       "type": "motoko"
     },
     "Homevestors_DAO_frontend": {
       "dependencies": [
-        "property_database"
+        "NFT"
       ],
       "frontend": {
         "entrypoint": "src/Homevestors_DAO_frontend/src/index.html"
