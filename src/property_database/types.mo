@@ -52,7 +52,8 @@ module {
         investment: InvestmentDetails;  // Separate structure for investment-related details
         currentValue: Nat;  // Current market value of the property
         pricePerSqFoot: Nat;  // Price per square foot of the property
-        valuations: [ValuationRecord];  // Array of property valuation records
+        valuationId: Nat; //Id of the valuations
+        valuations: [(Nat, ValuationRecord)];  // Array of property valuation records
         monthlyRent: Nat;  // Monthly rent collected from the property
         yield: Float;  // Yield based on rental income
     };
@@ -132,7 +133,8 @@ module {
     // AdministrativeInfo Structure
     public type AdministrativeInfo = {
         documentId: Nat;
-        
+        insuranceId: Nat;
+        notesId: Nat;
         insurance: [(Nat, InsurancePolicy)];  // Insurance policies
         documents: [(Nat, Document)];  // Property-related documents
         notes: [(Nat, Note)];  // General notes related to the property
@@ -140,6 +142,9 @@ module {
 
     // OperationalInfo Structure
     public type OperationalInfo = {
+        tenantId: Nat;
+        maintenanceId: Nat;
+        inspectionsId: Nat;
         tenants: [(Nat, Tenant)];  // Tenants in the property
         maintenance: [(Nat, MaintenanceRecord)];  // Maintenance tasks
         inspections: [(Nat, InspectionRecord)];  // Inspection records
